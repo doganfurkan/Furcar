@@ -161,7 +161,7 @@ img {
   }
 
   #menuClose {
-    top: 100%;
+    top: -100%;
     width: 100%;
     position: fixed;
     height: 100%;
