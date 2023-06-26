@@ -125,7 +125,7 @@ img {
   /* --------------------- Entrance ----------------------- */
 
   #entrance {
-    min-height: 33rem;
+    min-height: 36rem;
     background: var(--gradient);
     position: relative;
   }
