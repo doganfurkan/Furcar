@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Furcar - Rent a car</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body onload="setThings()">
+    <section id="entrance">
+      <header>
+        <div class="logo">Fur<span>car</span></div>
+        <button id="openMenu" onclick="openMenu()"><img src="assets/icons/menu.svg" alt="Menu"></button>
+        <nav>
+          <div id="menu">
+            <a href="#kampanyalar" class="navItem">Kampanyalar</a>
+            <a href="#tarihcemiz" class="navItem">Tarihçemiz</a>
+            <a href="#filomuz" class="navItem">Filomuz</a>
+            <a href="#blog" class="navItem">Blog</a>
+          </div>
+          <div id="signButtons">
+            <a href="#" class="secondaryButton">Üye Ol</a>
+            <a href="#" class="primaryButton">Giriş Yap</a>
+          </div>
+        </nav>
+      </header>
+
+      <div id="heading">
+        <h1>Aradığın aracı <span>hemen</span> kirala</h1>
+        <p>Tatilini kişisel araç konforuyla geçir</p>
+      </div>
+
+      <img
+        id="headingImage"
+        src="assets/heading-image.png"
+        alt="heading image"
+      />
+
+      <div id="searchBoxContainer">
+        <div id="searchBox">
+          <div id="takeLocation">
+            <img src="assets/icons/location.svg" alt="location" />
+            <input type="text" placeholder="Kiralama Noktası" />
+          </div>
+          <div id="leaveLocation">
+            <img src="assets/icons/location.svg" alt="location" />
+            <input type="text" placeholder="Bırakma Noktası" />
+          </div>
+          <div id="takeDate">
+            25 Haz
+            <span
+              role="button"
+              aria-label="Start time input"
+              onclick="openTimePopover(e)"
+              tabindex="1"
+            >
+              12:00
+            </span>
+          </div>
+          <div id="leaveDate">26 Haz <span>12:00</span></div>
+        </div>
+        <button id="searchButton">
+          Ara <img src="assets/icons/search.svg" alt="search" />
+        </button>
+      </div>
+    </section>
+
+    <section id="popularRoutes">
+      <header class="sectionHeader">
+        <h2>Popüler Rotalar</h2>
+        <h3>
+          <a href="#">Daha Fazlasını Keşfet</a
+          ><img src="assets/icons/chevron-right.svg" alt="See More" />
+        </h3>
+      </header>
+
+      <div id="populars">
+        <div class="popularRoute" data-text="İSTANBUL"></div>
+        <div class="popularRoute" data-text="İZMİR"></div>
+        <div class="popularRoute" data-text="ANKARA"></div>
+        <div class="popularRoute" data-text="MUĞLA"></div>
+      </div>
+    </section>
+
+    <section id="kampanyalar">
+      <header class="sectionHeader">
+        <h2>Kampanyalar</h2>
+        <h3>
+          <a href="#">Daha Fazlasını Keşfet</a
+          ><img src="assets/icons/chevron-right.svg" alt="See More" />
+        </h3>
+      </header>
+
+      <div id="kampanyalarInside">
+        <div class="kampanya">
+          <span>Sahtebank müşterilerine özel %25 indirim</span>
+          <a href="#">Detaylı Bilgi</a>
+        </div>
+        <div class="kampanya">
+          <span>Online rezervasyonlarda %15 indirim şansı</span>
+          <a href="#">Detaylı Bilgi</a>
+        </div>
+        <div class="kampanya">
+          <span>23 yaş altı gençler için %15 indirim şansı</span>
+          <a href="#">Detaylı Bilgi</a>
+        </div>
+        <div class="kampanya">
+          <span>Kiralık aracınız için Petrol Ofisi’nde %5 indirim</span>
+          <a href="#">Detaylı Bilgi</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="tarihcemiz">
+      <div class="tarihceFilling">
+        <div class="tarihceHeader">
+          <div class="tarihceYear">0</div>
+          <div class="tarihceLine">
+            <span class="tarihceCircle"></span>
+            <span class="lineSpan"></span>
+          </div>
+        </div>
+      </div>
+      <div id="tarihce">
+        <div class="tarihce">
+          <div class="tarihceHeader">
+            <div class="tarihceYear">2008</div>
+            <div class="tarihceLine">
+              <span class="tarihceCircle"></span>
+              <span class="lineSpan"></span>
+            </div>
+          </div>
+          <div class="tarihceContainer">
+            <div class="tarihceContent">
+              Furcar 2008 yılında ilk şubesini açarak sektöre giriş yaptı.
+            </div>
+          </div>
+        </div>
+        <div class="tarihce">
+          <div class="tarihceHeader">
+            <div class="tarihceYear">2013</div>
+            <div class="tarihceLine">
+              <span class="tarihceCircle"></span>
+              <span class="lineSpan"></span>
+            </div>
+          </div>
+          <div class="tarihceContainer">
+            <div class="tarihceContent">
+              Türkiye genelinde 25 şubeye ulaşarak ülkenin sayılı markalarından
+              olduk.
+            </div>
+          </div>
+        </div>
+        <div class="tarihce">
+          <div class="tarihceHeader">
+            <div class="tarihceYear">2018</div>
+            <div class="tarihceLine">
+              <span class="tarihceCircle"></span>
+              <span class="lineSpan"></span>
+            </div>
+          </div>
+          <div class="tarihceContainer">
+            <div class="tarihceContent">
+              Sektördeki ilk müşteri memnuniyeti ödülümüzü kazandık.
+            </div>
+          </div>
+        </div>
+        <div class="tarihce">
+          <div class="tarihceHeader">
+            <div class="tarihceYear">2023</div>
+            <div class="tarihceLine">
+              <span class="tarihceCircle"></span>
+              <span class="lineSpan"></span>
+            </div>
+          </div>
+          <div class="tarihceContainer">
+            <div class="tarihceContent">
+              Yenilenmiş web sitemiz ve uygulamamız yayınlandı.
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tarihceFilling">
+        <div class="tarihceHeader">
+          <div class="tarihceYear">0</div>
+          <div class="tarihceLine">
+            <span class="tarihceCircle"></span>
+            <span class="lineSpan"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="filomuz">
+      <header class="sectionHeader">
+        <h2>Filomuz</h2>
+        <h3>
+          <a href="#">Daha Fazlasını Keşfet</a
+          ><img src="assets/icons/chevron-right.svg" alt="See More" />
+        </h3>
+      </header>
+
+      <div id="filo">
+        <div class="filo">
+          <img src="assets/cars/egea.png" alt="Fiat Egea" />
+          <div class="carInfo">
+            <div class="carName">Fiat Egea</div>
+            <div class="dailyPrice">Günlük 1300₺*</div>
+          </div>
+        </div>
+        <div class="filo">
+          <img src="assets/cars/civic.png" alt="Honda Civic" />
+          <div class="carInfo">
+            <div class="carName">Honda Civic</div>
+            <div class="dailyPrice">Günlük 1700₺*</div>
+          </div>
+        </div>
+        <div class="filo">
+          <img src="assets/cars/insignia.png" alt="Opel Insignia" />
+          <div class="carInfo">
+            <div class="carName">Opel Insignia</div>
+            <div class="dailyPrice">Günlük 2500₺*</div>
+          </div>
+        </div>
+        <div class="filo">
+          <img src="assets/cars/s90.png" alt="Volvo S90" />
+          <div class="carInfo">
+            <div class="carName">Volvo S90</div>
+            <div class="dailyPrice">Günlük 3000₺*</div>
+          </div>
+        </div>
+      </div>
+
+      <div id="priceNote">*'den başlayan fiyatlarla</div>
+    </section>
+
+    <section id="blog">
+      <header class="sectionHeader">
+        <h2>Blog</h2>
+        <h3>
+          <a href="#">Daha Fazlasını Keşfet</a
+          ><img src="assets/icons/chevron-right.svg" alt="See More" />
+        </h3>
+      </header>
+
+      <div id="blogContent">
+        <div class="blogBox">
+          <img src="assets/blog/yakit.jpg" alt="#" />
+          <div class="blogBoxContent">
+            <div class="blogBoxHeader">
+              <span class="date">24.06.2023</span>
+              <h2>
+                <a href="#">Yakıt tüketimini azaltmanın yolları nelerdir?</a>
+              </h2>
+            </div>
+            <p>
+              Tatile çıkmak çoğumuz için tüm yıl boyunca beklediğimiz an olsa da
+              maliyet hepimizin stres sebebi olabilmekte. Pek...
+            </p>
+          </div>
+        </div>
+        <div class="blogBox">
+          <img src="assets/blog/fiyat-farki.jpg" alt="price difference" />
+          <div class="blogBoxContent">
+            <div class="blogBoxHeader">
+              <span class="date">23.06.2023</span>
+              <h2>
+                <a href="#"
+                  >Kurumsal firmalardaki kiralama ücretleri farkı nereden
+                  gelir?</a
+                >
+              </h2>
+            </div>
+            <p>
+              Eğer araç kiralama düşüncesi içerisindeyseniz aynı aracın farklı
+              fiyatlarla listelendiğini görmüşssünüzdür. Peki bu fa...
+            </p>
+          </div>
+        </div>
+        <div class="blogBox">
+          <img src="assets/blog/left-or-right.jpg" alt="Left or Right" />
+          <div class="blogBoxContent">
+            <div class="blogBoxHeader">
+              <span class="date">22.06.2023</span>
+              <h2>
+                <a href="#"
+                  >Trafiğin soldan aktığı ülkeler hangileridir? Hikayeleri
+                  nedir?</a
+                >
+              </h2>
+            </div>
+            <p>
+              Ülkemizde sağdan akmasına alıştığımız trafik, bazı ülkelerde
+              soldan akmaktadır. Bu ülkeler şu şekilde listelene...
+            </p>
+          </div>
+        </div>
+        <div class="blogBox">
+          <img src="assets/blog/vites.jpg" alt="Transmission" />
+          <div class="blogBoxContent">
+            <div class="blogBoxHeader">
+              <span class="date">21.06.2023</span>
+              <h2>
+                <a href="#"
+                  >Otomatik ve manuel viteslerin avantajları nelerdir?</a
+                >
+              </h2>
+            </div>
+            <p>
+              Otomobillerin motor gücünü farklı oranlarla tekerleklere aktarmayı
+              sağlayan vitesler, otomatik ve manuel olarak i...
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <nav>
+        <div id="footerNavLeft">
+          <div class="logo">Fur<span>car</span></div>
+          <div id="footerNavItems">
+            <a href="#kampanyalar" class="footerNavItem">Kampanyalar</a>
+            <a href="#tarihcemiz" class="footerNavItem">Tarihçemiz</a>
+            <a href="#filomuz" class="footerNavItem">Filomuz</a>
+            <a href="#blog" class="footerNavItem">Blog</a>
+          </div>
+        </div>
+        <div id="footerNavRight">
+          <button onclick="goTop()">
+            <img src="assets/icons/arrow-up.svg" alt="Go Top" />Yukarı Çık
+          </button>
+        </div>
+      </nav>
+      <div id="credit">
+        <div id="creditLeft">Designed and developed by Furkan Doğan</div>
+        <div id="creditRight">
+          <a
+            target="_blank"
+            rel="noreferrer"
+            href="https://github.com/doganfurkan"
+            >github</a
+          >
+          <a
+            target="_blank"
+            rel="noreferrer"
+            href="https://linkedin.com/in/furkan-doğan"
+            >linkedin</a
+          >
+          <a
+            target="_blank"
+            rel="noreferrer"
+            href="https://instagram.com/1furkandogan1"
+            >instagram</a
+          >
+          <a target="_blank" rel="noreferrer" href="#">portfolio</a>
+        </div>
+      </div>
+    </footer>
+
+    <div id="menuClose" onclick="closeMenu()"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
