@@ -39,6 +39,8 @@ Array.from(document.querySelectorAll(".datePicker")).forEach((datePicker) => {
   datePicker.setAttribute("max", `${maxDate.year}-${maxDate.month}-${maxDate.day}`);
 });
 
+
+
 // ------------------------- Touch Slider ---------------------
 var scrollPosition = 0,
   chosenSlider,
@@ -57,11 +59,20 @@ if (window.screen.width > 740) {
       document
         .getElementById(slider.id)
         .removeEventListener("mousemove", startScroll);
-      console.log(e.pageX);
       startPosition = e.pageX;
       scrollPosition = document.getElementById(slider.id).scrollLeft;
       startedScrolling = false;
     });
+    slider.addEventListener("mouseleave", (e) => {
+      slider.classList.remove("active");
+      document
+        .getElementById(slider.id)
+        .removeEventListener("mousemove", startScroll);
+      startPosition = e.pageX;
+      scrollPosition = document.getElementById(slider.id).scrollLeft;
+      startedScrolling = false;
+    });
+
     slider.addEventListener("scroll", () => {
       if (!startedScrolling) {
         scrollPosition = document.getElementById(slider.id).scrollLeft;
