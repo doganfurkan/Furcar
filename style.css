@@ -1166,6 +1166,12 @@ img {
     border:0;
   }
 
+  #takeDate label,
+  #leaveDate label{
+    width: 0;
+    opacity: 0;
+  }
+
   #leaveHour,
   #takeHour {
     -webkit-appearance: none;
