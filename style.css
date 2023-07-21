@@ -13,6 +13,23 @@
   --gradient: linear-gradient(135deg, #3e59b6 0%, #00a3ff 100%);
 }
 
+.touchSlider{
+  cursor: grab;
+}
+
+.touchSlider.active{
+  cursor:grabbing
+}
+
+.touchSlider *{
+    user-drag: none;  
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+ }
+
 @media screen and (min-width: 740px) {
   html {
     font-size: 12px;
