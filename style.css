@@ -1150,14 +1150,20 @@ img {
   #takeDate,
   #leaveDate {
     display: flex;
-    align-items: flex-start;
-    gap: 1.5rem;
+    align-items: center;
+    gap: .5rem;
     line-height: 100%;
     flex-shrink: 0;
     color: var(--neutral-100);
     leading-trim: both;
     text-edge: cap;
     font-size: 1.25rem;
+  }
+
+  #takeDate input,
+  #leaveDate input{
+    padding:.5rem;
+    border:0;
   }
 
   #leaveHour,
