@@ -3,7 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Furcar - Rent a car. Bu websitesi bir demo projedir. Author https://www.github.com/doganfurkan">
+    <meta
+      name="description"
+      content="Furcar - Rent a car. Bu websitesi bir demo projedir. Author https://www.github.com/doganfurkan"
+    />
     <title>Furcar - Rent a car</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -17,7 +20,9 @@
     <section id="entrance">
       <header>
         <div class="logo">Fur<span>car</span></div>
-        <button id="openMenu" onclick="openMenu()"><img src="assets/icons/menu.svg" alt="Menu"></button>
+        <button id="openMenu" onclick="openMenu()">
+          <img src="assets/icons/menu.svg" alt="Menu" />
+        </button>
         <nav>
           <div id="menu">
             <a href="#kampanyalar" class="navItem">Kampanyalar</a>
@@ -55,15 +60,66 @@
           </div>
           <div id="takeDate">
             25 Haz
-            <span
-              role="button"
-              aria-label="Start time input"
-              onclick="openTimePopover(e)"
-            >
-              12:00
-            </span>
+            <div class="customSelect">
+              <select name="takeHour" id="takeHour">
+                <option value="00">00:00</option>
+                <option value="01">01:00</option>
+                <option value="02">02:00</option>
+                <option value="03">03:00</option>
+                <option value="04">04:00</option>
+                <option value="05">05:00</option>
+                <option value="06">06:00</option>
+                <option value="07">07:00</option>
+                <option value="08">08:00</option>
+                <option value="09">09:00</option>
+                <option value="10">10:00</option>
+                <option value="11">11:00</option>
+                <option value="12">12:00</option>
+                <option value="13">13:00</option>
+                <option value="14">14:00</option>
+                <option value="15">15:00</option>
+                <option value="16">16:00</option>
+                <option value="17">17:00</option>
+                <option value="18">18:00</option>
+                <option value="19">19:00</option>
+                <option value="20">20:00</option>
+                <option value="21">21:00</option>
+                <option value="22">22:00</option>
+                <option value="23">23:00</option>
+              </select>
+            </div>
           </div>
-          <div id="leaveDate">26 Haz <span>12:00</span></div>
+          <div id="leaveDate">
+            <input type="date" name="leaveDay" id="leaveDay" />
+            <div class="customSelect">
+              <select name="leaveHour" id="leaveHour">
+                <option value="00">00:00</option>
+                <option value="01">01:00</option>
+                <option value="02">02:00</option>
+                <option value="03">03:00</option>
+                <option value="04">04:00</option>
+                <option value="05">05:00</option>
+                <option value="06">06:00</option>
+                <option value="07">07:00</option>
+                <option value="08">08:00</option>
+                <option value="09">09:00</option>
+                <option value="10">10:00</option>
+                <option value="11">11:00</option>
+                <option value="12">12:00</option>
+                <option value="13">13:00</option>
+                <option value="14">14:00</option>
+                <option value="15">15:00</option>
+                <option value="16">16:00</option>
+                <option value="17">17:00</option>
+                <option value="18">18:00</option>
+                <option value="19">19:00</option>
+                <option value="20">20:00</option>
+                <option value="21">21:00</option>
+                <option value="22">22:00</option>
+                <option value="23">23:00</option>
+              </select>
+            </div>
+          </div>
         </div>
         <button id="searchButton">
           Ara <img src="assets/icons/search.svg" alt="search" />
@@ -252,9 +308,12 @@
       <div id="blogContent">
         <div class="blogBox">
           <picture>
-            <source media="(min-width:700px)" srcset="assets/blog/yakit.webp">
-            <source media="(min-width:450px)" srcset="assets/blog/yakit-small.webp">
-            <img src="assets/blog/yakit-x-small.jpg" alt="Fuel Economy">
+            <source media="(min-width:700px)" srcset="assets/blog/yakit.webp" />
+            <source
+              media="(min-width:450px)"
+              srcset="assets/blog/yakit-small.webp"
+            />
+            <img src="assets/blog/yakit-x-small.jpg" alt="Fuel Economy" />
           </picture>
           <div class="blogBoxContent">
             <div class="blogBoxHeader">
@@ -271,9 +330,18 @@
         </div>
         <div class="blogBox">
           <picture>
-            <source media="(min-width:700px)" srcset="assets/blog/fiyat-farki.webp">
-            <source media="(min-width:450px)" srcset="assets/blog/fiyat-farki-small.webp">
-            <img src="assets/blog/fiyat-farki-x-small.jpg" alt="Price Difference">
+            <source
+              media="(min-width:700px)"
+              srcset="assets/blog/fiyat-farki.webp"
+            />
+            <source
+              media="(min-width:450px)"
+              srcset="assets/blog/fiyat-farki-small.webp"
+            />
+            <img
+              src="assets/blog/fiyat-farki-x-small.jpg"
+              alt="Price Difference"
+            />
           </picture>
           <div class="blogBoxContent">
             <div class="blogBoxHeader">
@@ -293,9 +361,18 @@
         </div>
         <div class="blogBox">
           <picture>
-            <source media="(min-width:700px)" srcset="assets/blog/left-or-right.webp">
-            <source media="(min-width:450px)" srcset="assets/blog/left-or-right-small.webp">
-            <img src="assets/blog/left-or-right-x-small.jpg" alt="Left or Right">
+            <source
+              media="(min-width:700px)"
+              srcset="assets/blog/left-or-right.webp"
+            />
+            <source
+              media="(min-width:450px)"
+              srcset="assets/blog/left-or-right-small.webp"
+            />
+            <img
+              src="assets/blog/left-or-right-x-small.jpg"
+              alt="Left or Right"
+            />
           </picture>
           <div class="blogBoxContent">
             <div class="blogBoxHeader">
@@ -315,9 +392,12 @@
         </div>
         <div class="blogBox">
           <picture>
-            <source media="(min-width:700px)" srcset="assets/blog/vites.webp">
-            <source media="(min-width:450px)" srcset="assets/blog/vites-small.webp">
-            <img src="assets/blog/vites-x-small.jpg" alt="Transmission">
+            <source media="(min-width:700px)" srcset="assets/blog/vites.webp" />
+            <source
+              media="(min-width:450px)"
+              srcset="assets/blog/vites-small.webp"
+            />
+            <img src="assets/blog/vites-x-small.jpg" alt="Transmission" />
           </picture>
           <div class="blogBoxContent">
             <div class="blogBoxHeader">
@@ -375,7 +455,12 @@
             href="https://instagram.com/1furkandogan1"
             >instagram</a
           >
-          <a rel="noreferrer" href="#" onclick="alert('Sorry, my portfolio website is not ready yet! You are always welcome, come back another time and hopefully it will be ready then!')">portfolio</a>
+          <a
+            rel="noreferrer"
+            href="#"
+            onclick="alert('Sorry, my portfolio website is not ready yet! You are always welcome, come back another time and hopefully it will be ready then!')"
+            >portfolio</a
+          >
         </div>
       </div>
     </footer>

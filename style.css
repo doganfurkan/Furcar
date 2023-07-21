@@ -13,22 +13,22 @@
   --gradient: linear-gradient(135deg, #3e59b6 0%, #00a3ff 100%);
 }
 
-.touchSlider{
+.touchSlider {
   cursor: grab;
 }
 
-.touchSlider.active{
-  cursor:grabbing
+.touchSlider.active {
+  cursor: grabbing;
 }
 
-.touchSlider *{
-    user-drag: none;  
-    user-select: none;
-    -moz-user-select: none;
-    -webkit-user-drag: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
- }
+.touchSlider * {
+  user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
 
 @media screen and (min-width: 740px) {
   html {
@@ -95,6 +95,8 @@ a {
 img {
   vertical-align: bottom;
 }
+
+/*************************** MOBILE START **********************************/
 
 @media screen and (max-width: 739px) {
   .logo {
@@ -256,7 +258,7 @@ img {
     text-edge: cap;
     font-size: 2rem;
     font-weight: 600;
-    text-shadow: 0 0 .5rem rgba(0, 0, 0, 0.3);
+    text-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.3);
   }
 
   #heading h1 span {
@@ -318,7 +320,7 @@ img {
     padding: 0.75rem 0.5rem;
     width: 100%;
     flex-grow: 1;
-    font-size:1rem
+    font-size: 1rem;
   }
 
   #takeDate,
@@ -335,6 +337,9 @@ img {
 
   #leaveDate {
     border-radius: 0 0 0.5rem 0.5rem;
+  }
+
+  #leaveHour {
   }
 
   #searchButton {
@@ -1145,7 +1150,6 @@ img {
   #takeDate,
   #leaveDate {
     display: flex;
-    padding: 1rem;
     align-items: flex-start;
     gap: 1.5rem;
     line-height: 100%;
@@ -1154,6 +1158,62 @@ img {
     leading-trim: both;
     text-edge: cap;
     font-size: 1.25rem;
+  }
+
+  #leaveHour,
+  #takeHour {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: transparent;
+    border: none;
+    padding: 1rem 1.5rem 1rem 1rem;
+    margin: 0;
+    width: auto;
+    font-family: inherit;
+    font-size: inherit;
+    cursor: inherit;
+    line-height: inherit;
+    z-index: 1;
+  }
+  select::-ms-expand {
+    display: none;
+  }
+
+  .customSelect {
+    display: grid;
+    grid-template-areas: "select";
+    align-items: center;
+    position: relative;
+    border: 0;
+    font-size: 1.25rem;
+    cursor: pointer;
+    background-color: transparent;
+  }
+
+  .customSelect select,
+  .customSelect::after {
+    grid-area: select;
+  }
+  .customSelect::after {
+    content: "";
+    justify-self: end;
+    width: 0.8rem;
+    height: 0.5rem;
+    background-color: black;
+    margin-right:.5rem;
+    -webkit-clip-path: polygon(12% 0, 50% 76%, 88% 0, 100% 0, 50% 100%, 0 0);
+    clip-path: polygon(12% 0, 50% 76%, 88% 0, 100% 0, 50% 100%, 0 0);
+  }
+
+  .customSelect select:focus + .focus {
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    right: -1px;
+    bottom: -1px;
+    border: 2px solid var(--select-focus);
+    border-radius: inherit;
   }
 
   #searchButton {
